@@ -1,9 +1,5 @@
 package Casa;
 
-import Casa.Casa;
-import Casa.Dispositivo;
-import Casa.Pavimento;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -12,20 +8,21 @@ public class Main {
         Ambientes salaDeEstar = new Ambientes("Sala de Estar");
         salaDeEstar.addDisp(ventilador);
         System.out.println(salaDeEstar.dispAmount());
-        System.out.println(ventilador.isOn());
+        System.out.println(ventilador.isState());
         salaDeEstar.turnAllOff();
-        System.out.println(ventilador.isOn());
+        System.out.println(ventilador.isState());
 
         Pavimento terreo = new Pavimento("Térreo");
         terreo.addAmbientes(salaDeEstar);
         terreo.ambNames();
         terreo.turnAllOn();
-        System.out.println(ventilador.isOn());
+        System.out.println(ventilador.isState());
 
-        Casa cafofo = new Casa("Mágno");
+
+        SmartHouse cafofo = new SmartHouse();
         cafofo.addPavimento(terreo);
         cafofo.turnAllOff();
-        System.out.println(ventilador.isOn());
+        System.out.println(ventilador.isState());
 
 
 

@@ -3,13 +3,12 @@ package Casa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Casa {
+public class SmartHouse {
     private List<Pavimento> pavimentos;
-    private String usuario;
 
-    public Casa(String usuario) {
+
+    public SmartHouse() {
         pavimentos = new ArrayList<>();
-        this.usuario = usuario;
     }
 
     public void turnAllOn(){
@@ -24,7 +23,7 @@ public class Casa {
         }
     }
 
-    public void pavNames(){
+    public void pavimentoNames(){
         for (Pavimento pav: pavimentos){
             System.out.println(pav.getName());
         }

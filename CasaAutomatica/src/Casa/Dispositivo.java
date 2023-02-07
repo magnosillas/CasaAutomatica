@@ -27,7 +27,7 @@ public class Dispositivo {
         this.name = name;
     }
 
-    public boolean isOn() {
+    public boolean isState() {
         return state;
     }
 

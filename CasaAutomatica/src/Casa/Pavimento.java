@@ -12,7 +12,7 @@ public class Pavimento {
         setName(name);
     }
 
-    public int dispAmount(){
+    public int dispositivoAmount(){
         int soma = 0;
 
         for (Ambientes amb : getAmbientes()){
