@@ -1,14 +1,12 @@
-package Casa;
+package Casa.Controllers;
 
-public class ArCondicionado extends Dispositivo{
+public class ArCondicionado extends Controllers {
     private int temperatura;
 
 
 
-    public ArCondicionado(int id) {
-        super(id);
+    public ArCondicionado() {
         setTemperatura(20);
-
     }
 
     public void aumentarTemp() {
@@ -45,7 +43,7 @@ public class ArCondicionado extends Dispositivo{
         return temperatura;
     }
 
-    public void setTemperatura(int temperatura) {
+    private void setTemperatura(int temperatura) {
         this.temperatura = temperatura;
     }
 

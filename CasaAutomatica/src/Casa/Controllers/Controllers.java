@@ -1,21 +1,24 @@
-package Casa;
+package Casa.Controllers;
 
-public class Dispositivo {
+import Casa.Devices;
+
+public class Controllers extends Devices {
     private String name;
     private boolean state;
     private int id;
+    private static int controllerID = 1;
 
-    public Dispositivo( int id) {
+    public Controllers() {
         turnOff();
-        setId(id);
+        this.id = controllerID++;
     }
 
     public void turnOn(){
-        setState(true);
+        this.state = true;
     }
 
     public void turnOff(){
-        setState(false);
+        this.state = false;
     }
 
 
@@ -31,17 +34,12 @@ public class Dispositivo {
         return state;
     }
 
-    public void setState(boolean state) {
-        this.state = state;
-    }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
 
 

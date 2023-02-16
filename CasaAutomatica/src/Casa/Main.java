@@ -1,25 +1,31 @@
 package Casa;
 
+import Casa.Controllers.Controllers;
+
 public class Main {
     public static void main(String[] args) {
 
-        Dispositivo ventilador = new Dispositivo(001);
+        Adress local = new Adress("praca", "boa vista","1048","04");
+
+
+
+        Controllers ventilador = new Controllers();
         ventilador.turnOn();
-        Ambientes salaDeEstar = new Ambientes("Sala de Estar");
+        Rooms salaDeEstar = new Rooms("Sala de Estar");
         salaDeEstar.addDisp(ventilador);
         System.out.println(salaDeEstar.dispAmount());
         System.out.println(ventilador.isState());
         salaDeEstar.turnAllOff();
         System.out.println(ventilador.isState());
 
-        Pavimento terreo = new Pavimento("Térreo");
+        Storey terreo = new Storey("Térreo");
         terreo.addAmbientes(salaDeEstar);
         terreo.ambNames();
         terreo.turnAllOn();
         System.out.println(ventilador.isState());
 
 
-        SmartHouse cafofo = new SmartHouse();
+        House cafofo = new House();
         cafofo.addPavimento(terreo);
         cafofo.turnAllOff();
         System.out.println(ventilador.isState());

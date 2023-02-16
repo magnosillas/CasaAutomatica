@@ -1,12 +1,12 @@
-package Casa;
+package Casa.Controllers;
 
-public class Lampada extends Dispositivo{
+public class Lamps extends Controllers {
     private String cor;
     private int intensidade;
 
 
-    public Lampada(int id) {
-        super(id);
+    public Lamps(String name) {
+        setName(name);
     }
 
 

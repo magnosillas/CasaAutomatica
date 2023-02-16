@@ -3,11 +3,11 @@ package Casa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pavimento {
+public class Storey {
     private String name;
-    private List<Ambientes> ambientes;
+    private List<Rooms> ambientes;
 
-    public Pavimento(String name) {
+    public Storey(String name) {
         ambientes = new ArrayList<>();
         setName(name);
     }
@@ -15,34 +15,34 @@ public class Pavimento {
     public int dispositivoAmount(){
         int soma = 0;
 
-        for (Ambientes amb : getAmbientes()){
+        for (Rooms amb : getAmbientes()){
             soma += amb.dispAmount();
         }
         return soma;
     }
 
     public void turnAllOff(){
-        for (Ambientes amb : getAmbientes()){
+        for (Rooms amb : getAmbientes()){
             amb.turnAllOff();
         }
     }
     public void turnAllOn(){
-        for (Ambientes amb : getAmbientes()){
+        for (Rooms amb : getAmbientes()){
             amb.turnAllOn();
         }
     }
 
-    public void addAmbientes(Ambientes amb){
+    public void addAmbientes(Rooms amb){
         getAmbientes().add(amb);
     }
 
     public void ambNames(){
-        for (Ambientes amb : getAmbientes()){
+        for (Rooms amb : getAmbientes()){
             System.out.println(amb.getName());
         }
     }
 
-    public List<Ambientes> getAmbientes() {
+    public List<Rooms> getAmbientes() {
         return ambientes;
     }
 
