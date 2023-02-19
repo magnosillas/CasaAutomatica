@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rooms {
-    private List<Devices> dispositivos;
+    private List<Devices> devices;
     private String name;
 
 
     public Rooms(String name) {
-        dispositivos= new ArrayList<>();
+        devices = new ArrayList<>();
 
         setName(name);
     }
 
     public void turnAllOff(){
-        for (Devices dis : getDispositivos()){
+        for (Devices dis : getDevices()){
             if(dis instanceof Controllers){
                 Controllers cont = (Controllers) dis;
                 cont.turnOff();
@@ -26,7 +26,7 @@ public class Rooms {
     }
 
     public void turnAllOn(){
-        for (Devices dis : getDispositivos()){
+        for (Devices dis : getDevices()){
             if(dis instanceof Controllers){
                 Controllers cont = (Controllers) dis;
                 cont.turnOn();
@@ -35,15 +35,15 @@ public class Rooms {
     }
 
     public int dispAmount(){
-        return getDispositivos().size();
+        return getDevices().size();
     }
 
     public void addDisp(Devices disp){
-        this.dispositivos.add(disp);
+        this.devices.add(disp);
     }
 
-    public List<Devices> getDispositivos() {
-        return dispositivos;
+    public List<Devices> getDevices() {
+        return devices;
     }
 
     public String getName() {

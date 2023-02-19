@@ -1,34 +1,30 @@
 package Casa.Controllers;
 
 public class Lamps extends Controllers {
-    private String cor;
-    private int intensidade;
-
+    private String color;
+    private int intensity;
 
     public Lamps(String name) {
         setName(name);
     }
 
-
-
-
-    public String getCor() {
-        return cor;
+    public String getColor() {
+        return color;
     }
 
-    public void setCor(String cor) {
-        cor = cor.toLowerCase();
-        if(cor.equals("azul") || cor.equals("vermelho") || cor.equals("verde") || cor.equals("amarelo")){
-            this.cor = cor;
+    public void setColor(String color) {
+        color = color.toLowerCase();
+        if(color.equals("azul") || color.equals("vermelho") || color.equals("verde") || color.equals("amarelo")){
+            this.color = color;
         }
     }
 
     public int getIntensidade() {
-        return intensidade;
+        return intensity;
     }
 
     public void setIntensidade(int intensidade) {
 
-        this.intensidade = intensidade;
+        this.intensity = intensidade;
     }
 }

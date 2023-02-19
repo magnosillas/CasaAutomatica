@@ -25,7 +25,7 @@ public class House {
         }
     }
 
-    public void pavimentoNames(){
+    public void storeyNames(){
         for (Storey pav: storeys){
             System.out.println(pav.getName());
         }

@@ -5,10 +5,10 @@ public class Fan extends Controllers {
 
     public Fan(String name) {
         setName(name);
-        mudarModo(1);
+        changeMode(1);
     }
 
-    public void mudarModo(int num){
+    public void changeMode(int num){
         if (num == 1){
             this.mode = num;
         } else if(num == 2){

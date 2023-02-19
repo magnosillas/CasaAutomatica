@@ -19,8 +19,8 @@ public class Main {
         System.out.println(ventilador.isState());
 
         Storey terreo = new Storey("Térreo");
-        terreo.addAmbientes(salaDeEstar);
-        terreo.ambNames();
+        terreo.addRooms(salaDeEstar);
+        terreo.roomNames();
         terreo.turnAllOn();
         System.out.println(ventilador.isState());
 

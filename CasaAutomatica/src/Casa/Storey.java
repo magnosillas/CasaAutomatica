@@ -5,45 +5,45 @@ import java.util.List;
 
 public class Storey {
     private String name;
-    private List<Rooms> ambientes;
+    private List<Rooms> rooms;
 
     public Storey(String name) {
-        ambientes = new ArrayList<>();
+        rooms = new ArrayList<>();
         setName(name);
     }
 
     public int dispositivoAmount(){
         int soma = 0;
 
-        for (Rooms amb : getAmbientes()){
+        for (Rooms amb : getRooms()){
             soma += amb.dispAmount();
         }
         return soma;
     }
 
     public void turnAllOff(){
-        for (Rooms amb : getAmbientes()){
+        for (Rooms amb : getRooms()){
             amb.turnAllOff();
         }
     }
     public void turnAllOn(){
-        for (Rooms amb : getAmbientes()){
+        for (Rooms amb : getRooms()){
             amb.turnAllOn();
         }
     }
 
-    public void addAmbientes(Rooms amb){
-        getAmbientes().add(amb);
+    public void addRooms(Rooms amb){
+        getRooms().add(amb);
     }
 
-    public void ambNames(){
-        for (Rooms amb : getAmbientes()){
+    public void roomNames(){
+        for (Rooms amb : getRooms()){
             System.out.println(amb.getName());
         }
     }
 
-    public List<Rooms> getAmbientes() {
-        return ambientes;
+    public List<Rooms> getRooms() {
+        return rooms;
     }
 
     public String getName() {

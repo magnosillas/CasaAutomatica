@@ -8,7 +8,7 @@ public class TV extends Controllers {
 
     }
 
-    public void mudarVolume(int vol){
+    public void changeVolume(int vol){
         if (vol <= 100 && vol >= 0){
             this.volume = vol;
         }

@@ -2,7 +2,7 @@ package Casa.Sensors;
 
 public class Sensor {
     private String name;
-    private float value;
+    private double value;
     private int id;
     private static  int sensorId;
 
@@ -23,7 +23,7 @@ public class Sensor {
         this.value = value;
     }
 
-    public float getValue() {
+    public double getValue() {
         return value;
     }
 }
